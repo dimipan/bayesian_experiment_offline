@@ -44,9 +44,9 @@ class Bayes:
         cpt = data1
         return cpt
 
-    def compute_like(self):
-        like = np.exp(-5.5*self.Dis)
-        return like
+    # def compute_like(self):
+    #     like = np.exp(-5.5*self.Dis)
+    #     return like
 
 
     # def compute_like(self):
@@ -56,13 +56,11 @@ class Bayes:
     #     return final
 
 
-    # def compute_like(self):
-    #     a = self.Angle / self.maxA
-    #     print(a)
-    #     p = self.Path / self.maxP
-    #     print(p)
-    #     like = np.exp(-a / self.wA) * np.exp(-p / self.wP)
-    #     return like
+    def compute_like(self):
+        a = self.Angle / self.maxA
+        p = self.Path / self.maxP
+        like = np.exp(-a / self.wA) * np.exp(-p / self.wP)
+        return like
 
     def compute_conditional(self):
         out1 = np.matmul(cpt, prior.T)

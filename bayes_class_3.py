@@ -39,9 +39,9 @@ class Bayes:
         cpt = data1
         return cpt
 
-    def compute_like(self):
-        like = np.exp(-10*self.Dis)
-        return like
+    # def compute_like(self):
+    #     like = np.exp(-10*self.Dis)
+    #     return like
 
     # def compute_like(self):  # sensor model .. alternatives at the end of the script
     #     a = self.Angle / np.sum(self.Angle)
@@ -49,11 +49,11 @@ class Bayes:
     #     final = np.exp(-a/self.wA) * np.exp(-p/self.wP)
     #     return final
 
-    # def compute_like(self):
-    #     a = self.Angle / self.maxA
-    #     p = self.Path / self.maxP
-    #     like = np.exp(-a / self.wA) * np.exp(-p / self.wP)
-    #     return like
+    def compute_like(self):
+        a = self.Angle / self.maxA
+        p = self.Path / self.maxP
+        like = np.exp(-a / self.wA) * np.exp(-p / self.wP)
+        return like
 
     def compute_conditional(self):
         out1 = np.matmul(cpt, prior.T)

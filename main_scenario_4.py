@@ -2,6 +2,18 @@ from __future__ import division
 import numpy as np
 from BayesianOperatorIntentRecognition import BayesianOperatorIntentRecognition
 
+"""
+Copyright (c) 2020-2021, Dimitris Panagopoulos
+All rights reserved.
+----------------------------------------------------
+"""
+
+# Short Description of this script : Instead of running trials all over again in ROS platform, this script encourages the
+# user to test different/modified algorithms (based on Bayesian Estimation).. Crucial ROS topics values have been extracted
+# (i.e. Path, Angle, Time model, etc) in the form of text files .. Once they are introduced HERE, each trial can be generated under
+# conditions may seem practically different (e.g. modified observation model) .. The script does the same job similar to ROS (in
+# the context of bayesian system's evaluation) based on experiments that have already been executed, just by utilizing the
+# generated topic values.
 if __name__ == '__main__':
     # ROS topics values are inserted as text files (data4 text files)
     Path1 = np.loadtxt('/home/dimiubuntu/data_collection/data4/path/path1_20.text', delimiter=',', usecols=(1),

@@ -14,7 +14,6 @@ All rights reserved.
 # conditions may seem practically different (e.g. modified observation model) .. The script does the same job similar to ROS (in
 # the context of bayesian system's evaluation) based on experiments that have already been executed, just by utilizing the
 # generated topic values.
-# -- job needs to be done for coding optimal performance --
 
 
 if __name__ == '__main__':
